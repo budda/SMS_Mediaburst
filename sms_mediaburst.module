@@ -3,7 +3,7 @@
 
 /**
  * @file
- * Adds support for sending SMS messages using the Clickatell gateway.
+ * Adds support for sending SMS messages using the Mediaburst gateway.
  */
 
 /**
@@ -20,13 +20,20 @@ function sms_mediaburst_gateway_info() {
   );
 }
 
+
+/**
+ * Gateway configuration form
+ * 
+ * @access public
+ * @param mixed $configuration
+ * @return void
+ */
 function sms_mediaburst_admin_form($configuration) {
   $form['sms_mediaburst_balance'] = array(
     '#type' => 'item',
     '#title' => t('Current balance'),
     '#value' => sms_mediaburst_balance(),
   );
-  
   $form['sms_mediaburst_ssl'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use SSL Encyption'),
