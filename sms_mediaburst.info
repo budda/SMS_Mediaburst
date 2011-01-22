@@ -1,0 +1,7 @@
+; $Id$
+name = "MediaBurst"
+description = "Allows the SMS Framework to use MediaBurst as a gateway."
+package = SMS Framework
+dependencies[] = sms
+dependencies[] = sms_user
+core = 6.x
